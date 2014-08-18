@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		38E8A36018C0E8AF00B7FBC3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 38E8A35F18C0E8AF00B7FBC3 /* main.c */; };
 		38E8A36218C0E8AF00B7FBC3 /* FFTW_example.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38E8A36118C0E8AF00B7FBC3 /* FFTW_example.1 */; };
+		38E8A36918C0EAB800B7FBC3 /* libfftw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E8A36818C0EAB800B7FBC3 /* libfftw3.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		38E8A35C18C0E8AF00B7FBC3 /* FFTW example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "FFTW example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E8A35F18C0E8AF00B7FBC3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		38E8A36118C0E8AF00B7FBC3 /* FFTW_example.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FFTW_example.1; sourceTree = "<group>"; };
+		38E8A36818C0EAB800B7FBC3 /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = ../../../../usr/local/Cellar/fftw/3.3.3/lib/libfftw3.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E8A36918C0EAB800B7FBC3 /* libfftw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 		38E8A35318C0E8AF00B7FBC3 = {
 			isa = PBXGroup;
 			children = (
+				38E8A36818C0EAB800B7FBC3 /* libfftw3.a */,
 				38E8A35E18C0E8AF00B7FBC3 /* FFTW example */,
 				38E8A35D18C0E8AF00B7FBC3 /* Products */,
 			);
@@ -195,6 +199,12 @@
 		38E8A36618C0E8AF00B7FBC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					/usr/local/Cellar/fftw/3.3.3/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +212,12 @@
 		38E8A36718C0E8AF00B7FBC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					/usr/local/Cellar/fftw/3.3.3/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -225,6 +241,7 @@
 				38E8A36718C0E8AF00B7FBC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
